@@ -38,7 +38,7 @@ def scan_port(port):
         if result == 0:
             service = common_ports.get(port, "Unknown")
             try:
-                sock.send(b"Hello\r\n")
+                sock.send(b"NRS.\r\n")
                 banner = sock.recv(1024).decode().strip()
             except:
                 banner = "No banner"
